@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+requests>=2.32
+pydantic>=2.7
+python-dotenv>=1.0
+langchain>=1.0
+langchain-core>=0.3
+langchain-google-genai>=2.1
+langgraph>=0.4
