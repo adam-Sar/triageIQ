@@ -62,7 +62,7 @@ def describe_llm_error(exc: Exception) -> str:
     if "429" in text or "resource_exhausted" in lowered or "quota" in lowered:
         return ("Gemini API rate limit or quota exceeded. Wait a minute and try again, "
                 "or check your plan at https://ai.google.dev/pricing")
-    if "api key" in lowered and ("invalid" in lowered or "expired" in lowered) or "api_key_invalid" in lowered:
+    if "api key" in lowered and ("invalid" in lowered or "expired" in lowered or "not valid" in lowered):
         return "The GOOGLE_API_KEY appears to be invalid or expired. Check the value in your .env file."
     if "not found" in lowered or "no longer available" in lowered:
         return (f"Model '{settings.gemini_model}' is not available for this API key. "
