@@ -20,3 +20,6 @@ backend/logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local process artifacts
+.sim.*
