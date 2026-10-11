@@ -23,3 +23,5 @@ Thumbs.db
 
 # Local process artifacts
 .sim.*
+
+# stray npm artifacts at project root\n/package.json\n/package-lock.json
