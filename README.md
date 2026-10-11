@@ -164,6 +164,3 @@ no API calls needed.
 | GET    | `/api/logs?severity=&limit=`      | Recent log entries                   |
 | POST   | `/api/investigations`             | Start an AI investigation            |
 | GET    | `/api/investigations/{id}`        | Investigation progress/report        |
-
-See `PROJECT_EXPLAINED.md` for a file-by-file walkthrough and an interview-ready explanation
-of how the agent works.
