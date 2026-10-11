@@ -1,5 +1,4 @@
 """LangChain tools the investigation agent can call.
-
 Every tool talks to the simulated monitored service over HTTP and returns a
 JSON string. Results are also parsed back into Python objects by the graph so
 the frontend can display exactly what the agent observed.

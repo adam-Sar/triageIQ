@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0e14;
+  --color-panel: #0f141b;
+  --color-panel-2: #131a23;
+  --color-line: #1d2632;
+  --color-line-soft: #18202b;
+  --color-ink: #e4eaf2;
+  --color-muted: #8b98a9;
+  --color-faint: #5c6879;
+  --color-accent: #5b8cff;
+  --color-accent-soft: #22314e;
+  --color-ok: #34d399;
+  --color-warn: #fbbf24;
+  --color-crit: #f87171;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  background-color: var(--color-bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* thin scrollbars that match the theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3546 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a3546;
+  border-radius: 4px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.35s ease both;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
