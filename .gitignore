@@ -25,3 +25,4 @@ Thumbs.db
 .sim.*
 
 # stray npm artifacts at project root\n/package.json\n/package-lock.json
+.run.pids
