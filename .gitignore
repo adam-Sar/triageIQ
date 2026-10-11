@@ -26,3 +26,6 @@ Thumbs.db
 
 # stray npm artifacts at project root\n/package.json\n/package-lock.json
 .run.pids
+
+# personal notes (local only)
+PROJECT_EXPLAINED.md
