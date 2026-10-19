@@ -24,7 +24,9 @@ Thumbs.db
 # Local process artifacts
 .sim.*
 
-# stray npm artifacts at project root\n/package.json\n/package-lock.json
+# stray npm artifacts at project root
+/package.json
+/package-lock.json
 .run.pids
 
 # personal notes (local only)
