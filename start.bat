@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Sentinel launcher
+title triageIQ launcher
 
 if not exist ".venv\Scripts\uvicorn.exe" (
     echo [!] Python venv not found. Create it first:
@@ -22,20 +22,20 @@ echo Cleaning up any previous instances...
 powershell -NoProfile -Command "Get-NetTCPConnection -LocalPort 8000,8001,5173 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }" >nul 2>&1
 
 echo Starting simulated service (port 8001)...
-start "sentinel simulator :8001" cmd /k ".venv\Scripts\uvicorn.exe simulator.service:app --port 8001 --app-dir backend"
+start "triageIQ simulator :8001" cmd /k ".venv\Scripts\uvicorn.exe simulator.service:app --port 8001 --app-dir backend"
 
 echo Starting API + AI agent (port 8000)...
-start "sentinel api :8000" cmd /k ".venv\Scripts\uvicorn.exe main:app --port 8000 --app-dir backend"
+start "triageIQ api :8000" cmd /k ".venv\Scripts\uvicorn.exe main:app --port 8000 --app-dir backend"
 
 echo Starting dashboard (port 5173)...
-start "sentinel frontend :5173" cmd /k "cd frontend && npm run dev"
+start "triageIQ frontend :5173" cmd /k "cd frontend && npm run dev"
 
 echo Waiting for services to come up...
 timeout /t 8 /nobreak >nul
 start "" http://localhost:5173
 
 echo.
-echo  Sentinel is running:
+echo  triageIQ is running:
 echo    dashboard   http://localhost:5173
 echo    api         http://localhost:8000/api/status
 echo    simulator   http://localhost:8001/health

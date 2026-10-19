@@ -16,7 +16,7 @@ export function Header({ status, onStatusRefresh }: { status: StatusResponse | n
           </div>
           <div>
             <div className="flex items-baseline gap-2">
-              <span className="text-sm font-semibold tracking-tight">Sentinel</span>
+              <span className="text-sm font-semibold tracking-tight">triageIQ</span>
               <span className="hidden text-[11px] text-faint sm:inline">AI incident investigation</span>
             </div>
             <p className="font-mono text-[11px] text-muted">

@@ -36,7 +36,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-line-soft py-4 text-center text-[11px] text-faint">
-        Sentinel MVP · synthetic data from a simulated service · investigation by a LangGraph agent (Google Gemini)
+        triageIQ · synthetic data from a simulated service · investigation by a LangGraph agent (Google Gemini)
       </footer>
     </div>
   )

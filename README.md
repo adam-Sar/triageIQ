@@ -1,4 +1,4 @@
-# Sentinel — AI Incident Investigation Agent
+# triageIQ — AI Incident Investigation Agent
 
 An end-to-end agentic AI demo: a simulated e-commerce backend fails in realistic ways, and a
 LangGraph agent powered by Google Gemini investigates the incident — choosing its own tools,
